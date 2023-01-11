@@ -14,13 +14,21 @@ public class Program {
 
         Seller seller = sellerDAO.findById(3);
 
+        System.out.println("\n------------TESTE 1-------------");
         System.out.println(seller);
 
+        System.out.println("\n------------TESTE 2-------------");
         Department dep = new Department(2, null);
         List<Seller> sellerList = sellerDAO.findByDepartment(dep);
 
-        for (Seller seller2: sellerList) {
-            System.out.println(seller2);
+        for (Seller obj: sellerList) {
+            System.out.println(obj);
+        }
+
+        System.out.println("\n------------TESTE 3-------------");
+        sellerList = sellerDAO.findAll();
+        for (Seller obj: sellerList) {
+            System.out.println(obj);
         }
 
     }
